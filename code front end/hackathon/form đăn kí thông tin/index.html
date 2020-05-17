@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <script>
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta-Tags -->
+
+    <!-- css files -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- css files -->
+
+    <!-- Online-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+    <!-- //Online-fonts -->
+
+</head>
+
+<body>
+
+    <!-- Main Content -->
+    <div class="main">
+        <div class="main-w3l">
+            <h1 class="logo-w3">Form đăng kí đặt lịch hẹn</h1>
+            <div class="w3layouts-main">
+
+                <form action="#" method="post">
+
+                    <input placeholder="Họ và tên" name="Name" type="text" required="">
+                    <input placeholder="Tuổi" name="Age" type="number" required="">
+                    <input placeholder="Số điện thoại" name="phone" type="text" required="">
+                    <input placeholder="SCMNN/SBHYT" name="" type="text" required="">
+                    <input placeholder="Địa chỉ" name="Address" type="text" required="">
+                    <select placeholder="Tỉnh" name="Address1" type="text" required="">
+                        <option value="">Tỉnh</option>
+                        
+                    </select>
+                    <select placeholder="Quận/Huyện" name="Address1" type="text" required="">
+                        <option value="">Quận/Huyện</option>
+                    </select>
+                    <select id="bv" name="bv" title="Bệnh viện" placeholder="Bệnh Viện" required="">
+						<option value="">Bệnh viện</option>
+						<option value="">Bệnh viện Da Liễu Thành Phố Đà Nẵng</option>
+						<option value="">Bệnh viện Gia Đình</option>
+						<option value="">Bệnh Viện Hoàn Mỹ</option>
+					  </select>
+                    <input placeholder="Ngày Khám" name="date" type="date" title="Ngày khám" required="">
+                    <select placeholder="Giờ Khám" name="time" type="time" title="Giờ Khám" required="">
+                        <option value="">8:00-9:00</option>
+                        <option value="">9:00-10:00</option>
+                        <option value="">11:00-12:00</option>
+                        <option value="">13:00-14:00</option>
+                        <option value="">14:00-15:00</option>
+                        <option value="">15:00-16:00</option>
+                        <option value="">17:00-18:00</option>
+
+                    </select>
+                    <input type="submit" value="Đặt Lịch" name="send">
+                </form>
+            </div>
+            <!-- //main -->
+            <!--footer-->
+            <div class="footer-w3l">
+                <p>&copy; Crush Caring 2020</p>
+            </div>
+            <!--//footer-->
+
+        </div>
+    </div>
+    <!-- //Main Content -->
+
+</body>
+
+</html>

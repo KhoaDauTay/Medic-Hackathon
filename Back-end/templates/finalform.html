@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'finalform.css' %}">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <main class="container">
+        <div class="row">
+            <div class="col-8">
+                <section class="">
+                    <form action="/send" method="post" name="" id="" enctype="">
+                        {% csrf_token %}
+                        <fieldset>
+                            <legend>Member information</legend>
+                            <label for="first_name">first_name</label>
+                            <input type="text" name="first_name" id="first_name" required><br>
+                            <label for="last_name">last_name</label>
+                            <input type="text" name="last_name" id="last_name" required><br>
+                            <label for="address">address</label>
+                            <input type="text" name="address" id="address" required><br>
+                            <label for="state">State:</label>
+                            <input type="text" name="state" id="state" required maxlength="2" placeholder="2-character code "><br>
+                            <label for="zip"> Zip code</label>
+                            <input type="text" name="zip" id="zip" required placeholder="5 or 9 digits" pattern="^\đ{5}(-\đ(4))?$" title="Ether 5 or 9 digits"><br>
+                            {% comment %} <label for="tel">telephone</label>
+                            <input type="tel" name="phone" id="phone" placeholder="999-999-9999" pattern="\d{3}[\-]\d{3}[\-]d{4}" title="Must be 999-999-9999"><br> {% endcomment %}
+                        </fieldset>
+                        <fieldset>
+                            <legend>Symptom</legend>
+                            <label for="membership_type">Membership Type:</label>
+                            <select name="membership_type" id="membership_type">
+                                <option value="j">Junior</option>
+                                <option value="r">Regular</option>
+                                <option value="c">Characters</option>
+                            </select><br>
+                            <label for="starting-date">Starting date:</label>
+                            <input type="date" name="starting_date" id="Starting_date" required><br>
+                            <label for="tickets">Tickets for guest:</label>
+                            <input type="number" name="tickets" id="tickets" value="2" min="1" max="4" placeholder="from 1 to 4"><br>
+                        </fieldset>
+                        <h1 id="h1">This is Link to Generate QR : <input type="text" name="data" id="Entry"></h1>
+                        <input type="submit" value="Generate QR Code" id="btn">
+                    </form>
+                </section>
+            </div>
+            <!-- cột để display QR code -->
+            <div class="col-4" id ="QR">
+                <aside>
+                {% if data %}
+                    <img src="{% static 'image/QR_CODE4.png' %}" alt="Qr-Customer">
+                {% else %}
+                    <h1>Kiểm tra thông tin của bạn</h1>
+                {% endif %}
+                    
+                </aside>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
